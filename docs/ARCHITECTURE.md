@@ -19,7 +19,6 @@ flowchart LR
   H[Farcaster hubs]
   R[Read providers<br/>Neynar, Hypersnap]
   OP[Optimism<br/>Key Registry, FID Market]
-  B[Base<br/>token + airdrop]
 
   W & M & N --> API
   W & M & N --> S
@@ -27,7 +26,6 @@ flowchart LR
   S -- signed messages --> H
   API --> R
   W & N -- wallet transactions --> OP
-  W & M & N -- claims --> B
 ```
 
 ## Client
@@ -58,12 +56,6 @@ flowchart LR
 ## FID Market
 
 - A peer-to-peer marketplace for Farcaster IDs. Listings and purchases settle onchain on Optimism; the client shows listing windows, market activity and seller proceeds.
-
-## Token distribution
-
-- Airdrop allocations are computed with integer-only (bigint) accounting and deterministic tie-breaking, then committed as a Merkle tree using the OpenZeppelin StandardMerkleTree layout.
-- The server verifies the deployed token and airdrop configuration against the chain before enabling claims, and confirms each claim by matching the exact calldata and the onchain claim event.
-- Before a claim is sent, the client writes a local journal entry, so a reload or lost response never silently replays a transaction whose outcome is unknown.
 
 ## Quality
 

@@ -32,14 +32,13 @@
 - **Keys stay on the device.** The local key vault is encrypted with AES-GCM-256 using a PBKDF2-derived key (200,000 iterations). FidCaster never holds a user's seed phrase.
 - **No single data source.** Reads go through a normalization layer over Neynar and a Hypersnap hub provider.
 - **Mini app host.** A host-side implementation of the Farcaster Mini App SDK (iframe and native in-app browser), with an EIP-1193 wallet bridge that simulates transactions and requires explicit approval.
-- **Careful money handling.** Integer-only (bigint) accounting for points and allocations, Merkle-based token distributions verified against the chain, and a crash-safe transaction journal so an interrupted claim is never blindly replayed.
 - **Performance.** Code-split routes and lazy loading cut startup JavaScript on mobile from 888 KB to 526 KB gzipped.
 
 More detail in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Code samples
 
-A handful of real files from the private repository are in [samples/](samples/README.md): on-device message signing, bigint token allocation with its tests, the Merkle airdrop code, performance utilities and a production React component.
+A handful of real files from the private repository are in [samples/](samples/README.md): on-device message signing and performance utilities.
 
 ## By the numbers (private repository)
 
