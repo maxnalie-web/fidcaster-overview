@@ -40,6 +40,14 @@ More detail in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 A handful of real files from the private repository are in [samples/](samples/README.md): on-device message signing and performance utilities.
 
+## This repository
+
+| Path | Contents |
+|---|---|
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | How the client, signing, reads, mini app host and FID Market fit together |
+| [samples/](samples/README.md) | Real excerpts from the private repository |
+| [assets/](assets) | Screenshots and logo |
+
 ## By the numbers (private repository)
 
 | | |
